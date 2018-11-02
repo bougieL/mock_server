@@ -1,6 +1,6 @@
 [{
   "name": "使用示例",
-  "url": "/",
+  "url": "",
   "method": "get",
   "jsonp": "jsonpcallback",
   "res": {
@@ -14,25 +14,24 @@
       "sign": "@csentence()",
       "age|1-100": 100,
       "record|1-20": [{
+        "name": "@pick('IPhone X', 'IPhone XS', 'Macbook Pro')",
         "method": "@pick('Check-in', 'Lucky Draw', 'Exchange', 'Official reward')",
         "time": "@datetime()"
       }]
     }
   },
   "reqField": [
-    "{Number} id 用户id"
+    "{String} userId 用户id"
   ],
   "resField": [
-    "{Object} micoin 金币对象",
-    "{Number} micoin.cur_coin 当前金币",
-    "{Number} micoin.last_coin 剩余金币",
-    "{Array} micoin_record 金币记录",
-    "{String} micoin_record.show_str 金币操作",
-    "{String} micoin_record.time_str 时间",
-    "{Number} micoin_record.number 金币数量",
-    "{Object} prize_record 兑换记录",
-    "{String} prize_record.img 商品图片链接",
-    "{String} prize_record.time_str 兑换时间",
-    "{String} prize_record.name 产品名称"
+    "{String} userName 用户名",
+    "{String} userId 用户id",
+    "{String} birthDate 用户生日",
+    "{String} avatar 用户头像",
+    "{Number} age 用户年龄",
+    "{Array} record 兑换记录",
+    "{String} record.name 商品名称",
+    "{String} record.method 兑换方式",
+    "{String} record.time 兑换时间"
   ]
 }]
