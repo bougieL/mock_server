@@ -1,0 +1,38 @@
+[{
+  "name": "使用示例",
+  "url": "/",
+  "method": "get",
+  "jsonp": "jsonpcallback",
+  "res": {
+    "message": "ok",
+    "code": 0,
+    "data": {
+      "userName": "@cname()",
+      "userId": "@id()",
+      "birthDate": "@date('yyyy-MM-dd')",
+      "avatar": "@image(100x100, #3399ff)",
+      "sign": "@csentence()",
+      "age|1-100": 100,
+      "record|1-20": [{
+        "method": "@pick('Check-in', 'Lucky Draw', 'Exchange', 'Official reward')",
+        "time": "@datetime()"
+      }]
+    }
+  },
+  "reqField": [
+    "{Number} id 用户id"
+  ],
+  "resField": [
+    "{Object} micoin 金币对象",
+    "{Number} micoin.cur_coin 当前金币",
+    "{Number} micoin.last_coin 剩余金币",
+    "{Array} micoin_record 金币记录",
+    "{String} micoin_record.show_str 金币操作",
+    "{String} micoin_record.time_str 时间",
+    "{Number} micoin_record.number 金币数量",
+    "{Object} prize_record 兑换记录",
+    "{String} prize_record.img 商品图片链接",
+    "{String} prize_record.time_str 兑换时间",
+    "{String} prize_record.name 产品名称"
+  ]
+}]
